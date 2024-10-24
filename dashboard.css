@@ -1,0 +1,297 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Roboto', sans-serif;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url(background.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.containerlist {
+    width: 450px;
+    height: 450px;
+    min-height: 400px;
+    padding: 30px;
+    background: transparent;
+    position: absolute; /* Position the container absolutely */
+    left: 0; /* Align it to the far left */
+    top: 50px; /* Maintain a margin from the top */
+    border-radius: 15px;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(5px);
+  }
+
+.sidebar-table {
+    width: 100%; /* Make the table take the full width of the sidebar */
+    border-collapse: collapse; /* Collapse borders for a cleaner look */
+}
+
+.sidebar-table td {
+    padding: 20px; /* Add some padding for spacing */
+}
+
+.sidebar-table a {
+    color: #333; /* Default link color */
+    text-decoration: none; /* Remove underline */
+}
+
+.sidebar-table a:hover {
+    background-color: #e7e7e7; /* Highlight background on hover */
+    color: #337ab7; /* Change color on hover */
+}
+
+.containerlist a {
+    color: #eee;
+    padding: 5px 15px;
+    border-radius: 100px;
+    border: 2px solid #e6b7eca1;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.container {
+    width: 450px; 
+    height: auto;
+    padding: 30px;
+    background: transparent; 
+    border: 2px solid #e6b7eca1; 
+    border-radius: 15px; 
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px); 
+  }
+
+.container p {
+    font-size: 30px;
+    justify-content: justify center;
+    color: #eee;
+    margin-left: 110px;
+}
+
+h1{
+    color: #eee;
+    text-align: center;
+    margin-bottom: 36px;
+}
+
+.input-container{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    margin-right: 10px;
+    justify-content: center;
+}
+
+.todo-input {
+    flex: 1;
+    outline: none;
+    padding: 10px 10px;
+    padding-left: 20px;
+    padding-right: 167px;
+    background-color: transparent;
+    border: 2px solid #e6b7eca1;
+    border-radius: 30px;
+    color: #eee;
+}
+
+.todo-input::placeholder {
+    color: #bfbfbf;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 40px;
+    color: #fff;
+    padding: 20px 45px 20px 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.input-box input::placeholder {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 18px;
+}
+
+.container .update-button {
+    width: 100%;
+    height: 45px;
+    background: #437cd3;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    color: #333;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+.search-button {
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #eee;
+    font-size: 20px;
+}
+
+.add-button {
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #eee;
+    font-size: 20px;
+}
+
+.empty-image {
+    margin: 55px auto 0;
+    display: block;
+  }
+  
+  .todo {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #463c7b;
+    border-radius: 5px;
+    margin: 10px 0;
+    padding: 10px 12px;
+    border: 2px solid #e6b7eca1;
+    transition: all 0.2s ease;
+  }
+  
+  .todo:first-child {
+    margin-top: 0;
+  }
+  
+  .todo:last-child {
+    margin-bottom: 0;
+  }
+  
+  .todo:hover {
+    background-color:#e6b7eca1;
+  }
+  
+  .todo label {
+    cursor: pointer;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    color: #eee;
+  }
+  
+  .todo span {
+    padding-left: 20px;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  span::before {
+    content: "";
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    margin-left: -30px;
+    border-radius: 100px;
+    border: 2px solid #e6b7eca1;
+  }
+  
+  input[type='checkbox'] {
+    visibility: hidden;
+  }
+  
+  input:checked + span {
+    text-decoration: line-through
+  }
+  
+  .todo:hover input:checked + span::before, input:checked + span::before {
+    background: url(./check.svg) 50% 50% no-repeat #09bb21;
+    border-color: #09bb21;
+  }
+  
+  .todo:hover span::before {
+    border-color: #eee;
+  }
+  
+  .todo .delete-btn  {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #eee;
+    font-size: 24px;
+  }
+  
+  .todos-container  {
+    height: 300px;
+    overflow: overlay;
+  }
+  
+  .todos-container::-webkit-scrollbar-track  {
+    background: rgb(247, 247, 247);
+    border-radius: 20px
+  }
+  
+  .todos-container::-webkit-scrollbar  {
+    width: 0;
+  }
+  
+  .todos-container:hover::-webkit-scrollbar  {
+    width: 7px;
+  }
+  
+  .todos-container::-webkit-scrollbar-thumb  {
+    background: #d5d5d5;
+    border-radius: 20px;
+  }
+  
+  .filters {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+  }
+  
+  .filter {
+    color: #eee;
+    padding: 5px 15px;
+    border-radius: 100px;
+    border: 2px solid #e6b7eca1;
+    transition: all 0.2s ease;
+    cursor: pointer;
+  }
+  
+  .filter.active, .filter:hover {
+    background-color: #e6b7eca1;
+  }
+  
+  .delete-all {
+    display: flex;
+    background: transparent;
+    color: #eee;
+    padding: 7px 15px;
+    border-radius: 100px;
+    text-decoration: underline;
+    border: 2px solid #e6b7eca1;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .delete-all:hover {
+    background-color: #e6b7eca1;
+  }
